@@ -76,12 +76,3 @@ El modelo final fue desplegado usando **FastAPI** para ofrecer una API sencilla 
 
 ## Instrucciones adicionales
 Para ejecutar el proyecto, asegúrate de instalar las dependencias necesarias especificadas en los notebooks y scripts, preferiblemente usando un entorno virtual.
-
----
-
-## Autor
-Tu nombre o equipo (Opcional)
-
----
-
-📌 **¡Éxito en la revisión y gracias por la oportunidad!**
