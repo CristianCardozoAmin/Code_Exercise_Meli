@@ -140,9 +140,13 @@ def transform_status(df):
     return df
 
 def transform_shipping_mode(df):
-    shipping_mode_dummies = pd.get_dummies(df['shipping_mode'], prefix='shipping_mode')
-    df = pd.concat([df, shipping_mode_dummies], axis=1)
-    df.drop(columns=['shipping_mode'], inplace=True)
+    if 'shipping_mode' in df.columns:
+        shipping_mode_dummies = pd.get_dummies(df['shipping_mode'], prefix='shipping_mode')
+        df = pd.concat([df, shipping_mode_dummies], axis=1)
+        df.drop(columns=['shipping_mode'], inplace=True)
+    else:
+        print("Columna 'shipping_mode' no encontrada; creando columnas dummy vacías.")
+        df['shipping_mode_desconocido'] = 1 
     return df
 
 ########################################
@@ -150,6 +154,8 @@ def transform_shipping_mode(df):
 ########################################
 
 def transform_dataframe(df, conversion_rate=15.0):
+
+    print(df.columns)
     # Primer bloque de transformaciones
     print('Primer bloque de transformaciones')
     df = transform_warranty(df)

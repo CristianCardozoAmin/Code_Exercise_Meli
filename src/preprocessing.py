@@ -71,7 +71,7 @@ def load_dataset(data_source) -> pd.DataFrame:
     """
     #Validamos si es un dataframe en caso de que lo sea se copia
     if isinstance(data_source, pd.DataFrame):
-        return remove_blanks_columns_name(data_source)
+        return explot_columns_nested(remove_blanks_columns_name(data_source))
     
     #En caso que se entregue una ruta, validamos que es y cargamos 
     if isinstance(data_source, str):
