@@ -60,8 +60,8 @@ Ambos modelos se optimizaron utilizando `GridSearchCV` y la métrica principal s
 
 | Modelo          | Accuracy | F1-score | AUC ROC |
 |-----------------|----------|----------|---------|
-| XGBoost         | **0.881**    | **0.875**    | Excelente desempeño |
-| LightGBM        | 0.8733   | 0.8675   | Excelente desempeño |
+| XGBoost         | **0.881**    | **0.875**    | **0.95** |
+| LightGBM        | 0.8733   | 0.8675   | 0.95 |
 
 Se recomienda como métrica secundaria el área bajo la curva ROC (**AUC**), por su capacidad intuitiva para evaluar el desempeño del modelo en términos de falsos positivos y verdaderos positivos.
 
